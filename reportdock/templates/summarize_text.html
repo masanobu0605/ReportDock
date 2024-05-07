@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>文字置き換え</h2>
+<p>テキストを入力してください。指定した文字を置き換えます。</p>
+<textarea id="text-input" rows="10" cols="50"></textarea><br>
+<button onclick="replaceText()">文字置き換え</button>
+<div id="result"></div>
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}

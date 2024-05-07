@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>スペース削除</h2>
+<p>テキストを入力してください。スペースを自動で削除します。</p>
+
+<div class="text-area-container">
+    <div class="input-area">
+        <p>処理前</p>
+        <textarea id="text-input" rows="10" cols="50"></textarea>
+        <button class="primary-btn" onclick="removeSpaces()">スペース削除</button>
+    </div>
+    <div class="output-area">
+        <p>処理後</p>
+        <textarea id="result" rows="10" cols="50" readonly></textarea>
+        <button class="primary-btn"  onclick="copyText()">コピー</button>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+{% endblock %}

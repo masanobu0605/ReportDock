@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>文字数カウント</h2>
+<div>
+    <p>テキストを入力してください。文字数をカウントします。</p>
+    <textarea id="text-input" rows="10" cols="50" placeholder = "文字数をカウントする文章を入力してください。"></textarea><br>
+    <button class="primary-btn" onclick="countCharacters()">文字数カウント</button>
+</div>
+
+<div>
+    <div id="result" placeholder = "文字数 : ??"></div>
+</div>
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}

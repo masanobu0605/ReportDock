@@ -1,0 +1,181 @@
+/* ヘッダーのスタイリング */
+header {
+    border-bottom: #555;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 中央揃えではなく、要素間にスペースを設定 */
+    padding: 0 20px; /* 左右にパディングを設定して全体的に余白を持たせる */
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* 他の要素より上に表示 */
+}
+
+.header-left {
+    margin-left: 5px; /* 左側の余白を設定 */
+    flex: 1; /* 余白を考慮して自動的に幅を調整 */
+}
+/* ヘッダーのスタイリング */
+
+
+/* フッターのスタイリング */
+footer {
+    background-color: #ffffff;
+    color: rgb(109, 108, 108);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 2px 0; /* 上下のパディングをさらに減らす */
+    height: 25px; /* フッターの高さをさらに小さく */
+    display: flex; /* フレックスボックスを使用 */
+    align-items: center; /* 子要素を垂直方向の中央に配置 */
+    justify-content: center; /* 水平方向の中央に配置 */
+}
+
+footer a, footer p {
+    font-size: 12px; /* フッター内のテキストサイズ */
+    margin: 0; /* 余計なマージンを削除 */
+    padding: 0; /* 余計なパディングを削除 */
+}
+/* フッターのスタイリング */
+
+/* ボディと全体の設定 */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+/* サイドバーのスタイリング */
+.sidebar {
+    background-color: #333;
+    color: #fff;
+    width: 170px;
+    padding: 20px;
+    height: 100%;
+    position: fixed;
+    top: 60px; /* ヘッダーの高さに合わせて調整 */
+    left: 0;
+    
+}
+
+/* サイドバー内のリンク */
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+}
+
+/* コンテンツエリアのスタイリング */
+.content {
+    flex: 1; /* フレキシブルボックスの子要素として動的に領域を占めるように設定 */
+    margin-top: 60px; /* ヘッダーの高さ分だけ下にずらす */
+    margin-left: 220px; /* サイドバーの幅 + マージンを設定 */
+    padding: 20px;
+    background-color: #f4f4f4;
+    overflow-y: auto; /* 内容が多い場合にスクロール可能にする */
+}
+
+/* コンテンツエリア内のブロック */
+.content div {
+    background-color: white;
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.text-area-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.input-area, .output-area {
+    flex: 1;
+    margin-right: 10px;
+}
+
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    display: block;
+    width: 30%;
+    margin-left: 0;
+}
+
+
+
+.text-processing {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-container {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;  /* アイテムを垂直中央揃えに */
+    flex-wrap: wrap;  /* 必要に応じて折り返し */
+}
+
+/* 入力フィールドのスタイリングを改善 */
+.form-group input[type="text"] {
+    width: 100%; /* 全幅に設定 */
+    padding: 12px 20px; /* パディングを増やして入力しやすくする */
+    margin: 8px 0; /* 上下のマージンを設定 */
+    display: inline-block; /* ブロックレベルのインライン要素として表示 */
+    border: 2px solid #ccc; /* 枠線を明確に */
+    border-radius: 4px; /* 角を丸く */
+    box-sizing: border-box; /* ボックスサイズの計算方法をborder-boxに設定 */
+    transition: border-color 0.3s; /* 枠線の色変更にアニメーションを設定 */
+}
+
+.form-group input[type="text"]:focus {
+    border-color: #66afe9; /* フォーカス時に枠線の色を変更 */
+    outline: none; /* デフォルトのアウトラインを削除 */
+}
+
+
+.primary-btn, .secondary-btn {
+    background-color: #28a745;  /* 緑色の背景 */
+    color: white;  /* 白色のテキスト */
+    padding: 8px 12px;  /* パディングを設定 */
+    border: none;  /* 枠線なし */
+    border-radius: 5px;  /* 角を丸くする */
+    cursor: pointer;  /* ポインターを手の形にする */
+    width: 120px;  /* ボタンの幅を120pxに設定 */
+    margin-right: 10px;  /* 右のマージン */
+}
+
+.button-group button {
+    flex-grow: 1;  /* ボタンが均等にスペースを取るように */
+    max-width: 200px;  /* 最大幅を設定 */
+}
+
+
+.button-group {
+    display: flex;  /* ボタンを横並びにする */
+}

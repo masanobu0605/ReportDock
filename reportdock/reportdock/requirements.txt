@@ -1,6 +1,0 @@
-Flask
-openai
-gunicorn
-pymysql
-mysql
-mysql-connector

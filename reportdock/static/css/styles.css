@@ -13,11 +13,6 @@ header {
     z-index: 1000;  /* ヘッダー全体に高いz-indexを設定 */
 }
 
-.header-left {
-    margin-left: 5px; /* 左側の余白を設定 */
-    flex: 1; /* 余白を考慮して自動的に幅を調整 */
-    
-}
 
 /* ヘッダーの右端のスタイル */
 .header-right {

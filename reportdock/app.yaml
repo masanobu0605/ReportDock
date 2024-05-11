@@ -7,10 +7,3 @@ handlers:
   static_dir: static/
 - url: /.*
   script: auto
-
-env_variables:
-  DB_USER: 'testuser-1'
-  DB_PASSWORD: 'test0001'
-  DB_NAME: 'testDB-20240504'
-  DB_CONNECTION_NAME: 'gae-sample-site-422100:asia-northeast1:gae-sample-site-20240504'
-

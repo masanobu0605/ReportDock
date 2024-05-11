@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>文章要約</h2>
+
+<div class="form-group">
+    <textarea id="input_text_replace"  rows="10" cols="50" placeholder="ここにテキストを入力"></textarea>
+</div>
+
+<div class="form-group button-group">
+    <button type="button" class="primary-btn" onclick="summarizeText()">要約</button>
+    <button type="reset" class="primary-btn">クリア</button>
+    <button type="button" id="copy_button" class="primary-btn" onclick="copyText()">コピー</button>
+</div>
+<div class="form-group">
+    <textarea id="result" name="result" rows="10" cols="50" placeholder="ここに結果が表示されます" readonly></textarea>
+</div>
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}

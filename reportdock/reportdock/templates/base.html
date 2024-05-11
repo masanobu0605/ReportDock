@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReportDock</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- ReportDock 用のカスタム CSS スタイルシート -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h2><i class="fas fa-anchor"></i> Report Dock</h2>
+        </div>
+        <div class="header-right">
+            <h2><i id="hamburger" class="fas fa-bars" onclick="toggleSidebar()"></i></h2>
+        </div>
+    </header>
+    
+    
+
+    <!-- サイドバーメニュー -->
+    <div class="sidebar">
+        <a href="{{ url_for('home') }}"><i class="fas fa-home"></i> ホーム</a>
+        <a href="{{ url_for('remove_spaces_page') }}"><i class="fas fa-eraser"></i> スペース削除</a>
+        <a href="{{ url_for('replace_text_page') }}"><i class="fas fa-exchange-alt"></i> 文字置き換え</a>
+        <a href="{{ url_for('count_characters_page') }}"><i class="fas fa-sort-numeric-up"></i> 文字数カウント</a>
+
+        <a href="{{ url_for('from_templates_page') }}"><i class="fas fa-file-alt"></i> テンプレートから</a>
+        <a href="{{ url_for('translate_to_japanese_page') }}"><i class="fa-solid fa-language"></i> 日本語に翻訳</a>
+        <a href="{{ url_for('summarize_text_page') }}"><i class="fas fa-file-alt"></i> 文章要約</a>
+    </div>
+
+    <!-- メインコンテンツエリア -->
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <p>© 2024 ReportDock. All rights reserved.</p>
+    </footer>
+</body>
+</html>

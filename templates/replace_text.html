@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>文字置き換え</h2>
+<section class="form-container">
+    <form action="{{ url_for('replace_text') }}" method="POST">
+        <div class="form-group">
+            <input type="text" id="old_text" placeholder="古い文字を入力">
+            <input type="text" id="new_text" placeholder="新しい文字を入力">
+        </div>
+
+        <div class="form-group">
+            <p>処理前</p>
+            <textarea id="input_text_replace"  rows="10" cols="50" placeholder="ここにテキストを入力"></textarea>
+        </div>
+
+        
+
+        <div class="form-group button-group">
+            <button type="button" class="primary-btn" onclick="replaceText()">置き換える</button>
+            <button type="reset" class="primary-btn">クリア</button>
+            <button type="button" id="copy_button" class="primary-btn" onclick="copyText()">コピー</button>
+        </div>
+
+        <div class="form-group">
+            <p>処理後</p>
+            <textarea id="result" name="result" rows="10" cols="50" placeholder="ここに結果が表示されます" readonly></textarea>
+        </div>
+    </form>
+</section>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}
